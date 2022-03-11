@@ -50,7 +50,7 @@ for _, opt in tqdm(enumerate(operators.values())):
         tot = len(topt.values())
         results = []
         #枚举所有干员，计算猜测他能够得到的信息熵
-        for x in topt.values():
+        for x in operators.values():
             dtb = dict()
             for y in topt.values():  #枚举剩余满足条件的干员，进行分类
                 ret = guess(x, y)
