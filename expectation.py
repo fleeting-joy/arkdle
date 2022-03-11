@@ -50,7 +50,7 @@ for _, opt in tqdm(enumerate(operators.values())):
         tot = len(topt.values())
         results = []
         #枚举所有干员，计算猜测他能够得到的信息熵
-        for x in operators.values():
+        for x in topt.values():
             dtb = dict()
             for y in topt.values():  #枚举剩余满足条件的干员，进行分类
                 ret = guess(x, y)
@@ -83,6 +83,8 @@ i = 0
 for x in records:
     if x[1] == "阿米娅(近卫)":
         name = "阿米娅(近卫)  "
+    elif x[1] in ["Castle-3", "Lancet-2", "THRM-EX", "W", "12F"]:
+        name = x[1] + ' ' * (14 - len(x[1]))
     else:
         name = x[1] + ' ' * (14 - 2 * len(x[1]))
     print(f"{name}{x[0]},", end = "")

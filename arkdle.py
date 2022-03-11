@@ -72,6 +72,8 @@ while 1:
         for i in range(10):
             if results[i][2] == "阿米娅(近卫)":
                 name = "阿米娅(近卫)  "
+            elif results[i][2] in ["Castle-3", "Lancet-2", "THRM-EX", "W", "12F"]:
+                name = results[i][2] + ' ' * (14 - len(results[i][2]))
             else:
                 name = results[i][2] + ' ' * (14 - 2 * len(results[i][2]))
             print(f"{name} {results[i][0]:.4f} {results[i][1]}")
