@@ -1,0 +1,4 @@
+operator.csv 是干员数据表，版本更新后可以自己手动更新
+arkdle.exe 是可执行文件，直接运行根据说明进行输入即可使用
+arkdle.py 是其源码
+expectation.py 是求平均猜测次数的程序的源码
